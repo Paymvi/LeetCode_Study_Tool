@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app-container {
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+  color: #333;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Button Container */
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+button:hover {
+  background-color: #5a54e0;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #4a47c3;
+  transform: scale(1);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Problem Display Section */
+.problem-display {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  background-color: #f3f4f7;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.problem-display:hover {
+  transform: translateY(-3px);
+}
+
+.problem-display {
+  background: linear-gradient(135deg, #f8f8f8, #ececec);
+}
+
+/* Footer */
+footer {
+  font-size: 14px;
+  color: #888;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .button-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-container {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  
+  }
+
+
+  /* Add this to your App.css */
+.problem-display {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.problem-display:hover {
+  opacity: 0.8;  /* Slight fade effect when hovering over the problem text */
+}
+
+.problem-display svg {
+  transition: all 0.3s ease;
+}
+
+.problem-display svg:hover {
+  color: #007bff;  /* Change color on hover */
+}
+
+
+
+}
