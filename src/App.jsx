@@ -7,6 +7,8 @@ import { FaClipboard } from 'react-icons/fa';
 // import { FaClipboard } from 'react-icons/fa';  // Import the clipboard icon
 
 const App = () => {
+
+  const [darkMode, setDarkMode] = useState(false);
   
   const problemNames = [
     "Contains Duplicate", "Valid Anagram", "Two Sum", "Group Anagram", "Top K Frequent Elements", "Valid Sudoku", 
@@ -112,6 +114,16 @@ const App = () => {
   };
 
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    if (!darkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  };
+
+
   return (
     <div className="app-container">
       <h1><strong>Random LeetCode Problem Generator</strong></h1>
@@ -127,6 +139,9 @@ const App = () => {
         <button onClick={() => handleChoice(9)}>Graphs</button>
         <button onClick={() => handleChoice(10)}>Completely Random</button>
         <button onClick={() => handleChoice(11)}>New Problem</button>
+        <button onClick={toggleDarkMode}>
+          {darkMode ? "Light Mode" : "Dark Mode"}
+        </button>
       </div>
       {problem && (
         <div 
