@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import { FaClipboard } from 'react-icons/fa';
+
 
 
 // import { FaClipboard } from 'react-icons/fa';  // Import the clipboard icon
@@ -127,11 +129,21 @@ const App = () => {
         <button onClick={() => handleChoice(11)}>New Problem</button>
       </div>
       {problem && (
-        <div className="problem-display" onClick={copyToClipboard}>
+        <div 
+          className="problem-display"
+          onClick={copyToClipboard}  // Make the entire div clickable
+        >
           {problem} {/* Full problem with name and number */}
+          
+          <FaClipboard 
+            style={{
+              marginLeft: '10px',  // Space between the text and the icon
+              verticalAlign: 'middle'  // Align icon vertically with the text
+            }} 
+          />
         </div>
-
       )}
+
     </div>
   );
 };

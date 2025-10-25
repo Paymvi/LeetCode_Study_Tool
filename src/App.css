@@ -159,5 +159,11 @@ footer {
 }
 
 
+.problem-display:active {
+  background-color: #d1d1d1; /* Darker background when clicked */
+}
+
+
+
 
 }
